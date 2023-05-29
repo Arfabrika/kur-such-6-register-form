@@ -1,14 +1,29 @@
-<h1>Registraciya</h1>
-<form>
-    <p>Imya</p>
-    <input type="password" name="name">
-    <p>Telephon</p>
-    <input type="password" name="phone">
-    <p>Parol'</p>
-    <input type="text" name="pass">
-    <p>Parol' eshche raz</p>
-    <input type="text" name="pass2">
-    <br>
-    <br>
-    <input type="submit" value="Otpravit'"></input>
-</form>
+<!DOCTYPE html>
+<meta charset="utf-8" /> 
+<head>
+    <title>Registraciya</title>
+</head>
+<body>
+    <h1>Registraciya</h1>
+    <form method="POST" id="form" action="./cgi-bin/back.py">
+        <p>Imya</p>
+        <input type="password" name="name">
+        <p>Telephon</p>
+        <input type="password" name="phone">
+        <p>Kategoriya godnosti (A - D)</p>
+        <input type="password" name="type">
+        <p>Parol'</p>
+        <input type="text" name="pass">
+        <p>Parol' eshche raz</p>
+        <input type="text" name="pass2">
+        <br>
+        <div>
+        <label>Ya ne Oleg</label>
+        <input type="checkbox" name="Oleg_check">
+        </div>
+        <br>
+        <br>
+        <input type="submit" value="Otpravit'"></input>
+    </form>
+</body>
+</html>
