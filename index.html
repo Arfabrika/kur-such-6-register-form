@@ -3,18 +3,23 @@
 <head>
     <title>Vhod</title>
 </head>
-<script type= "text/javascript" src = "./window_form.js"></script>
+<script type= "text/javascript" src = "./common.js"></script>
+<link rel="stylesheet" href="./main.css">
 <body>
     <h1>Vhod v sistemu</h1>
     <form action="./cgi-bin/login.py">
-        <p>Imya</p>
-        <input type="password" name="name">
-        <p>Parol'</p>
-        <input type="text" name="pass">
+        <div id="name_bl">
+            <p>Imya</p>
+            <input type="password" name="name">
+        </div>
+        <div id="pass_bl">
+            <p>Parol'</p>
+            <input type="text" name="pass">
+        </div>
         <br>
         <br>
-        <input type="submit" value="Vojti"></input>        
+        <input type="submit" value="Vojti" id="in_but"></input>        
     </form>
-    <button onclick="init()">Zaregistrirovat'sya</button>
+    <button onclick="init()" id="reg_but">Zaregistrirovat'sya</button>
 </body>
 </html>

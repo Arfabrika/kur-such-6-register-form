@@ -1,0 +1,38 @@
+body {
+    background-image: url(https://i.pinimg.com/originals/66/ac/a5/66aca55d3d74bff3fcd7f7c04d27088b.gif);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+label, p, input, button {
+    font-size: 30px;
+}
+
+#hdr {
+    font-size: 110px;
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    -webkit-animation-name: rotation;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes rotation {
+    0% {-webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+        transform:rotate(0deg);}
+    100% {-webkit-transform:rotate(360deg);
+        -moz-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg);}
+    }

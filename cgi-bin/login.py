@@ -2,9 +2,6 @@ import cgi
  
 form = cgi.FieldStorage()
 
-# print(form['name'].value)
-# print(form['pass'].value)
-
 name = form['name'].value
 passw = form['pass'].value
 
@@ -27,6 +24,8 @@ if (find_flag):
     <meta charset="utf-8" />
     <TITLE>V sisteme</TITLE>
     </head>
+    <script type= "text/javascript" src = "../common.js"></script>
+    <link rel="stylesheet" href="../main.css">
     <body>
     <h1>Uvazhaemyj <i>{name}</i>, server ustal, i emu nuzhno nemnogo otdohnut'</h1>
     <a href="../index.html"> Vernut'sya na glavnuyu </a>
@@ -38,6 +37,8 @@ else:
     <meta charset="utf-8" />
     <TITLE>Net dostupa</TITLE>
     </head>
+    <script type= "text/javascript" src = "../common.js"></script>
+    <link rel="stylesheet" href="../main.css">
     <body>
     <h1>Vvedeny nepravil'nye dannye</h1>
     <a href="../index.html"> Vernut'sya na glavnuyu </a>

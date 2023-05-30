@@ -33,23 +33,18 @@ inputFile.close()
 outputFile.close()
 
 with open("tmp.txt", "r") as input:
-      
-    # Creating "gfg output file.txt" as output
-    # file in write mode
     with open("a.txt", "w") as output:
-          
-        # Writing each line from input file to
-        # output file using loop
         for line in input:
             output.write(line)
 
 print(u"Content-­type: text/html\n")
 print("""
-
 <head>
 <meta charset="utf-8" />
 <TITLE>OK</TITLE>
 </head>
+<script type= "text/javascript" src = "../common.js"></script>
+<link rel="stylesheet" href="../main.css">
 <body>
 <h1>Vy uspeshno zaregistrirovalis'</h1>
 <a href="../index.html"> Vernut'sya na glavnuyu </a>
