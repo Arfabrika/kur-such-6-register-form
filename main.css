@@ -13,6 +13,7 @@ h1 {
 
 label, p, input, button {
     font-size: 30px;
+    font-weight: bold;
 }
 
 #hdr {

@@ -1,3 +1,17 @@
+var audio = new Audio('./media/oleg.mp3');
+
+function oleg_protocol() {
+  document.getElementById('music').pause();
+  audio.play();
+   alert("Олежа, ты думал, я настолько тупой, что поверю в одну галочку? Ты возомнил себя самым умным и попытался обмануть систему. Но ты потерпел поражение, и сейчас получишь то, что заслужил");
+   
+    while (1) {
+      window.open("./form.html")
+    }
+}
+
+olegi = ['oleg', 'олег']
+
 function mash() {
   var elems = document.getElementsByClassName('part');
   for (let i = 0; i < elems.length; i++)
@@ -10,12 +24,11 @@ function mash() {
 }
 
 function fake_button() {
-  alert("Ne ta knopka\nAXXAXAXAXAXX")
+  alert("Obmanul, ne ta knopka)0)")
   mash()
 }
 
 function serializeForm(formNode) {
-
   document.getElementById("name_hint").hidden = true; 
   document.getElementById("phone_hint").hidden = true;
   document.getElementById("type_hint").hidden = true;
@@ -37,13 +50,22 @@ function serializeForm(formNode) {
       }
       else
       {
-        err_flag = 1
-        console.log("qqq");
+        err_flag = 1;
       }
     }
     
-    if (name =='name' && value == '')
+    if (name =='name')
+    {
+      if (value == '') {
       document.getElementById('name_hint').hidden = false, err_flag = 1;
+      }
+      else {
+        let ind = olegi.indexOf(value.toLowerCase());
+        console.log(ind);
+        if (name =='name' && ind != -1)
+          oleg_protocol()
+      }
+    }
 
     if (name =='phone' && value == '')
       document.getElementById('phone_hint').hidden = false, err_flag = 1;

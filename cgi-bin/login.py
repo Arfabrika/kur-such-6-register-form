@@ -29,6 +29,7 @@ if (find_flag):
     <body>
     <h1>Uvazhaemyj <i>{name}</i>, server ustal, i emu nuzhno nemnogo otdohnut'</h1>
     <a href="../index.html"> Vernut'sya na glavnuyu </a>
+    <audio autoplay=true src="../media/yes.mp3">
     </body>
     """)
 else:
@@ -42,5 +43,6 @@ else:
     <body>
     <h1>Vvedeny nepravil'nye dannye</h1>
     <a href="../index.html"> Vernut'sya na glavnuyu </a>
+    <audio autoplay=true src="../media/no.mp3">
     </body>
     """)

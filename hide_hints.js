@@ -11,4 +11,10 @@ window.onload = function() {
     document.getElementById("pass2_hint").innerHTML = "Paroli ne sovpadayut";
     document.getElementById("err").hidden = true;
     document.getElementById("err").innerHTML = "Zapolnite vse polya";
+    greetings = document.createElement("audio");
+    greetings.src = './media/form.mp3';
+    greetings.autoplay = true;
+    greetings.id = 'music';
+    document.getElementById('err').appendChild(greetings)
   }
+
