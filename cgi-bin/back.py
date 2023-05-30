@@ -4,20 +4,45 @@ form = cgi.FieldStorage()
 f = open("a.txt", "a")
 
 data = [''] * 2; i=0
-print(data)
 for field in ('name', 'pass'):
-      if not field in form:
-            data[i] = '(unknown)'
-      else:
-
+      if field in form:
             if not isinstance(form[field], list):
                   data[i] = form[field].value
             else:
                   values = [x.value for x in form[field]]
                   data[i] = ', '.join(values)
-      f.write(data[i] + "\n")
+            f.write(data[i] + "\n")
       i+=1
-f.write("\n")
+f.close()
+
+outputFile = open("tmp.txt", "w")
+
+inputFile = open("a.txt", "r")
+
+lines_seen_so_far = set()
+
+for line in inputFile:
+
+	if line not in lines_seen_so_far:
+
+		outputFile.write(line)
+
+		lines_seen_so_far.add(line)	
+
+inputFile.close()
+outputFile.close()
+
+with open("tmp.txt", "r") as input:
+      
+    # Creating "gfg output file.txt" as output
+    # file in write mode
+    with open("a.txt", "w") as output:
+          
+        # Writing each line from input file to
+        # output file using loop
+        for line in input:
+            output.write(line)
+
 print(u"Content-­type: text/html\n")
 print("""
 

@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <meta charset="utf-8" /> 
 <head>
-    <title>Registraciya</title>
+    <title>Registraciya</title>    
 </head>
+<script type= "text/javascript" src = "./hide_hints.js"></script>
 <body>
     <h1>Registraciya</h1>
     <form method="POST" id="form" action="./cgi-bin/back.py">
         <p>Imya</p>
-        <input type="password" name="name">
+        <input type="password" name="name"> 
+        <label id="name_hint"></label>
         <p>Telephon</p>
         <input type="password" name="phone">
+        <label id="phone_hint"></label>
         <p>Kategoriya godnosti (A - D)</p>
         <input type="password" name="type">
+        <label id="type_hint"></label>
         <p>Parol'</p>
         <input type="text" name="pass">
+        <label id="pass_hint"></label>
         <p>Parol' eshche raz</p>
         <input type="text" name="pass2">
+        <label id="pass2_hint"></label>
+        <br>
         <br>
         <div>
         <label>Ya ne Oleg</label>
         <input type="checkbox" name="Oleg_check">
         </div>
         <br>
-        <br>
         <input type="submit" value="Otpravit'"></input>
+        <p id="err"></p>
     </form>
 </body>
+<script type= "text/javascript" src = "./check_form.js"></script>
 </html>
